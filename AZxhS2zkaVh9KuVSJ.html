@@ -1,0 +1,355 @@
+<html><head><base href="https://streamflix.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>StreamFlix - Your Ultimate Streaming Experience</title>
+<style>
+  :root {
+    --primary-color: #e50914;
+    --secondary-color: #221f1f;
+    --text-color: #ffffff;
+    --background-color: #141414;
+    --hover-color: #ff3e3e;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover {
+    color: var(--hover-color);
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: var(--hover-color);
+  }
+
+  .features {
+    padding: 4rem 0;
+  }
+
+  .features h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .plans {
+    padding: 4rem 0;
+    background-color: var(--secondary-color);
+  }
+
+  .plans h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .plan-card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .plan-card:hover {
+    transform: scale(1.05);
+  }
+
+  .plan-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .plan-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .plan-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .plan-features li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a href="#" class="logo">StreamFlix</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#plans">Plans</a></li>
+        <li><a href="#login">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Your Ultimate Streaming Experience</h1>
+        <p>Unlimited movies, TV shows, and more. Watch anywhere. Cancel anytime.</p>
+        <a href="#plans" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Why Choose StreamFlix?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📺</div>
+            <h3 class="feature-title">Vast Content Library</h3>
+            <p>Enjoy a wide variety of movies, TV shows, and exclusive originals.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3 class="feature-title">Personalized Recommendations</h3>
+            <p>Discover new favorites with our smart recommendation engine.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3 class="feature-title">Multi-Device Support</h3>
+            <p>Watch on your TV, computer, tablet, or smartphone.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">Parental Controls</h3>
+            <p>Keep your family safe with customizable content restrictions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans" class="plans">
+      <div class="container">
+        <h2>Choose Your Plan</h2>
+        <div class="plans-grid">
+          <div class="plan-card">
+            <h3 class="plan-title">Basic</h3>
+            <p class="plan-price">$8.99/month</p>
+            <ul class="plan-features">
+              <li>Good video quality</li>
+              <li>Watch on 1 device at a time</li>
+              <li>Ad-supported</li>
+            </ul>
+            <a href="#" class="cta-button">Select Plan</a>
+          </div>
+          <div class="plan-card">
+            <h3 class="plan-title">Standard</h3>
+            <p class="plan-price">$13.99/month</p>
+            <ul class="plan-features">
+              <li>Better video quality</li>
+              <li>Watch on 2 devices at a time</li>
+              <li>Ad-free experience</li>
+            </ul>
+            <a href="#" class="cta-button">Select Plan</a>
+          </div>
+          <div class="plan-card">
+            <h3 class="plan-title">Premium</h3>
+            <p class="plan-price">$17.99/month</p>
+            <ul class="plan-features">
+              <li>Best video quality</li>
+              <li>Watch on 4 devices at a time</li>
+              <li>Ad-free + offline viewing</li>
+            </ul>
+            <a href="#" class="cta-button">Select Plan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 StreamFlix. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Simple animation for feature cards
+      const featureCards = document.querySelectorAll('.feature-card');
+      featureCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          card.style.transform = 'translateY(-10px)';
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = 'translateY(0)';
+        });
+      });
+
+      // Placeholder for login functionality
+      const loginLink = document.querySelector('a[href="#login"]');
+      loginLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Login functionality would be implemented here.');
+      });
+
+      // Placeholder for plan selection
+      const planButtons = document.querySelectorAll('.plan-card .cta-button');
+      planButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+          e.preventDefault();
+          const planTitle = e.target.closest('.plan-card').querySelector('.plan-title').textContent;
+          alert(`You've selected the ${planTitle} plan. Sign up process would continue here.`);
+        });
+      });
+    });
+  </script>
+</body></html>
